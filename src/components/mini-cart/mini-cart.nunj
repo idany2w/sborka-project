@@ -1,0 +1,19 @@
+{% from "../icon/icon.nunj" import icon %}
+
+{% macro miniCart(props) %}
+
+    {% set iconClassName = "mini-cart__icon" %}
+    {% if props.iconClassName %}
+        {% set iconClassName = iconClassName + " " + props.iconClassName %}
+    {% endif %}
+
+    <a href="#cart" class="mini-cart{% if props.className %} {{ props.className }}{% endif %}">
+        {{ icon({
+            iconName: 'cart',
+            className: iconClassName,
+            attributes: 'viewBox="0 0 24 21"'
+        }) }}
+
+        <span class="mini-cart__counter">2</span>
+    </a>
+{% endmacro %}

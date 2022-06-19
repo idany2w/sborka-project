@@ -1,0 +1,8 @@
+{% extends "../ext/base.nunj" %}
+
+{% from "../../components/icon/icon.nunj" import icon %}
+
+{% block content %}
+	{% include '../../components/header/header.nunj' %}
+
+{% endblock content %}

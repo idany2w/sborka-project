@@ -1,0 +1,39 @@
+{% from "../burger/burger.nunj" import burger %}
+{% from "../mini-cart/mini-cart.nunj" import miniCart %}
+{% from "../../components/menu/menu.nunj" import menu %}
+
+
+<div class="header">
+	<div class="header__logo">
+		<a href="/" class="header__logo-link">
+			{{ icon({
+				iconName: 'logo',
+				className: 'header__logo-icon',
+				attributes: 'viewBox="0 0 89 32"'
+			}) }}
+		</a>
+	</div>
+	<div class="header__menu">
+		{{ menu() }}
+	</div>
+	<div class="header__buttons">
+		<a href="#search" class="header__button">
+			{{ icon({
+				iconName: 'search',
+				className: 'header__icon',
+				attributes: 'viewBox="0 0 24 24"'
+			}) }}
+		</a>
+
+		{{ miniCart({
+			className: 'mini-cart--counter-show header__button',
+			iconClassName: 'header__icon'
+		}) }}
+
+		<div class="header__burger">
+			{{ burger({
+				className: 'header__button'
+			}) }}
+		</div>
+	</div>
+</div>

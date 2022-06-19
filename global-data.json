@@ -1,0 +1,38 @@
+{
+	"menuItems": [
+		{
+			"name": "Women’s",
+			"path": "#Women’s"
+		},
+		{
+			"name": "Men’s",
+			"path": "#Men’s"
+		},
+		{
+			"name": "Home",
+			"path": "#Home"
+		},
+		{
+			"name": "Travel",
+			"path": "#Travel"
+		},
+		{
+			"name": "Beauty",
+			"path": "#Beauty"
+		},
+		{
+			"name": "Sale",
+			"path": "#Sale"
+		}
+	],
+	"someData": [
+		{
+			"title": "Item 1",
+			"text": "Desc 1"
+		},
+		{
+			"title": "Item 2",
+			"text": "Desc 2"
+		}
+	]
+}

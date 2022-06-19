@@ -1,0 +1,27 @@
+.mini-cart {
+	display: flex;
+	position: relative;
+
+	&__counter {
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		align-items: flex-end;
+		position: absolute;
+		z-index: 2;
+		left: 100%;
+		top: 0;
+		font-size: 10px;
+		font-weight: 400;
+
+		height: 1.3em;
+		min-width: 1.3em;
+		border-radius: 1.3em;
+		padding: 0 0.3em;
+
+		transform: translate(-50%, -35%);
+
+		color: #ffffff;
+		background-color: #3366ff;
+	}
+}
