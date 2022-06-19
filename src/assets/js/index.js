@@ -18,6 +18,7 @@ class ProjectApp {
 		};
 		this.components = {
 			header: require('../../components/header/header').default,
+			basketProduct: require('../../components/basket-product/basket-product').default,
 		};
 		this.helpers = {};
 		this.modules = {};
@@ -25,6 +26,8 @@ class ProjectApp {
 			document.documentElement.classList.remove('_loading');
 		});
 		document.addEventListener('click', this.components.header.headerBurgerClick);
+		document.addEventListener('click', this.components.basketProduct.basketProductRemove);
+		document.addEventListener('click', this.components.basketProduct.basketProductCountChange);
 	}
 }
 

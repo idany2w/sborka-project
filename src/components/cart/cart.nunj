@@ -79,7 +79,7 @@
                     <p class="cart__sidebar-title">My basket</p>
 
                     <div class="basket">
-                        <div class="basket-product">
+                        <div class="basket__item basket-product" data-price="525" data-currency="$">
                             <a href="#product" class="basket-product__image">
                                 <img src="assets/images/product-1@2x.png" alt="Amet minim mollit non deserunt ullamco est sit">
                             </a>
@@ -104,7 +104,7 @@
                             </div>
                             <button class="basket-product__remove"></button>
                         </div>
-                        <div class="basket-product">
+                        <div class="basket__item basket-product" data-price="525" data-currency="$">
                             <a href="#product" class="basket-product__image">
                                 <img src="assets/images/product-2@2x.png" alt="Amet minim mollit non">
                             </a>
