@@ -1,0 +1,103 @@
+.basket-product{
+    display: grid;
+    grid-template-columns: 100px 150px 1fr;
+    grid-template-rows: auto 1fr;
+    align-items: start;
+    column-gap: 12px;
+    row-gap: 15px;
+
+    &__image{
+        display: flex;
+        grid-area: image;
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+
+        img{
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            object-fit: center;
+        }
+    }
+
+    &__title{
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #000000;
+        min-height: 2em;
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+    &__meta{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    &__count{
+        display: flex;
+        align-items: center;
+        width: 85px;
+        justify-content: space-between;
+
+        &-change{
+            width: 22px;
+            height: 22px;
+            border: none;
+            background-color: transparent;
+            display: flex;
+            position: relative;
+            cursor: pointer;
+
+            &-icon{
+                width: 22px;
+            }
+        }
+    }
+
+    &__price{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #000000;
+    }
+
+    &__remove{
+        justify-self: end;
+        display: flex;
+        width: 18px;
+        height: 18px;
+        position: relative;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 1;
+
+        &::before,
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background-color: #CFCFCF;
+            width: 22px;
+            height: 2px;
+        }
+        
+
+        &::before{
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        &::after{
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    }
+}

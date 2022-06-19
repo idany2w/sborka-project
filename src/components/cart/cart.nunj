@@ -1,17 +1,156 @@
 {% from "../../components/stages-line/stages-line.nunj" import stagesLine %}
+{% from "../../components/checkbox/checkbox.nunj" import checkbox %}
+{% from "../../components/icon/icon.nunj" import icon %}
+
 
 <div class="cart">
-    <div class="cart__container">
-        <div class="cart__inner">
-            <div class="cart__content">
+    <div class="cart__inner">
+        <div class="cart__content">
+            <div class="cart__stages">
+                <div class="cart__stages-top">
+                    {{ stagesLine({
+                        items: cartStages,
+                        acitveId: 3
+                    }) }}
+                </div>
 
-                {{ stagesLine({
-                    items: cartStages,
-                    acitveId: 3
-                }) }}
-            
+                <div class="cart__stages-content">
+                    <p class="cart__stages-title">Billing Information</p>
+
+                    <div class="cart__payments">
+                    
+                        <div class="cart__payments-item">
+                            {{ checkbox({
+                                className: 'cart__payments-input',
+                                type: 'radio',
+                                name: 'payment',
+                                value: '1',
+                                isChecked: true,
+                                text: 'Pay with Credit Card'
+                            }) }}
+                        </div>
+
+                        <div class="cart__payments-item">
+                            {{ checkbox({
+                                className: 'cart__payments-input',
+                                type: 'radio',
+                                name: 'payment',
+                                value: '2',
+                                text: icon({
+                                    iconName: 'paypal',
+                                    className: '',
+                                    attributes: 'viewBox="0 0 85 23" width="85px"'
+                                })
+                            }) }}
+                        </div>
+                    </div>
+
+                    <div class="cart__card-input">
+                        {% include '../../components/card-input/card-input.nunj' %}
+                    </div>
+
+                    <div class="cart__checkboxes">
+                        {{ checkbox({
+                            className: 'checkbox--square cart__checkboxes-item',
+                            type: 'checkbox',
+                            name: 'save',
+                            isChecked: true,
+                            text: 'Save information of this credit card'
+                        }) }}
+
+                        {{ checkbox({
+                            className: 'checkbox--square cart__checkboxes-item',
+                            type: 'checkbox',
+                            name: 'privacy',
+                            text: 'I accept the <a href="#terms">terms and comditions</a> and the <a href="privacy">Privacy Policies</a>'
+                        }) }}
+                    </div>
+                </div>
+
+                <div class="cart__stages-controls">
+                    <button class="cart__stages-control btn">Back</button>
+                    <button class="cart__stages-control btn btn--fill">Check Out</button>
+                </div>
             </div>
-            <div class="cart__sidebar">cart__sidebar</div>
+        </div>
+        <div class="cart__sidebar">
+            <div class="cart__sidebar-item">
+                <div class="cart__basket">
+                    <p class="cart__sidebar-title">My basket</p>
+
+                    <div class="basket">
+                        <div class="basket-product">
+                            <a href="#product" class="basket-product__image">
+                                <img src="assets/images/product-1@2x.png" alt="Amet minim mollit non deserunt ullamco est sit">
+                            </a>
+                            <a href="#product" class="basket-product__title">Amet minim mollit non deserunt ullamco est sit</a>
+                            <div class="basket-product__meta">
+                                <div class="basket-product__count">
+                                    <button class="basket-product__count-change basket-product__count-dec">
+                                        {{ icon({
+                                            iconName: 'round-minus',
+                                            className: 'basket-product__count-change-icon'
+                                        }) }}
+                                    </button>
+                                    <p class="basket-product__count-number">1</p>
+                                    <button class="basket-product__count-change basket-product__count-inc">
+                                        {{ icon({
+                                            iconName: 'round-plus',
+                                            className: 'basket-product__count-change-icon'
+                                        }) }}
+                                    </button>
+                                </div>
+                                <p class="basket-product__price">$ 525</p>
+                            </div>
+                            <button class="basket-product__remove"></button>
+                        </div>
+                        <div class="basket-product">
+                            <a href="#product" class="basket-product__image">
+                                <img src="assets/images/product-2@2x.png" alt="Amet minim mollit non">
+                            </a>
+                            <a href="#product" class="basket-product__title">Amet minim mollit non</a>
+                            <div class="basket-product__meta">
+                                <div class="basket-product__count">
+                                    <button class="basket-product__count-change basket-product__count-dec">
+                                        {{ icon({
+                                            iconName: 'round-minus',
+                                            className: 'basket-product__count-change-icon'
+                                        }) }}
+                                    </button>
+                                    <p class="basket-product__count-number">1</p>
+                                    <button class="basket-product__count-change basket-product__count-inc">
+                                        {{ icon({
+                                            iconName: 'round-plus',
+                                            className: 'basket-product__count-change-icon'
+                                        }) }}
+                                    </button>
+                                </div>
+                                <p class="basket-product__price">$ 525</p>
+                            </div>
+                            <button class="basket-product__remove"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart__sidebar-item">
+                <p class="cart__sidebar-title">Promo code</p>
+                <div class="cart__promocode">
+                    <input type="text" class="cart__promocode-input" placeholder="Placeholder Text">
+                    <button type="text" class="cart__promocode-submit btn btn--fill">Apply</button>
+                </div>
+            </div>
+            <div class="cart__sidebar-item">
+                <div class="cart__list">
+                    <p class="cart__list-item">Subtotal</p>
+                    <p class="cart__list-item">$1 050</p>
+                    <p class="cart__list-item">Tax</p>
+                    <p class="cart__list-item">$100</p>
+                    <p class="cart__list-item">Shipping</p>
+                    <p class="cart__list-item">$150</p>
+                    <p class="cart__list-item cart__list-item--total">Total</p>
+                    <p class="cart__list-item cart__list-item--total">$1 300</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -1,0 +1,28 @@
+<div class="card-input">
+    <div class="card-input__inner">
+        <div class="card-input__group card-input__group--full">
+            <p class="card-input__input-title">Name on card</p>
+            <input type="text" name="name" class="card-input__input" placeholder="Placeholder Text">
+        </div>
+        
+        <div class="card-input__group card-input__group--full">
+            <p class="card-input__input-title">Card number</p>
+            <div class="card-input__card-number">
+                <input type="text" name="card_number_1" class="card-input__input">
+                <input type="text" name="card_number_2" class="card-input__input">
+                <input type="text" name="card_number_3" class="card-input__input">
+                <input type="text" name="card_number_4" class="card-input__input">
+            </div>
+        </div>
+
+        <div class="card-input__group">
+            <p class="card-input__input-title">Expire date</p>
+            <input type="text" name="exp_date" class="card-input__input">
+        </div>
+
+        <div class="card-input__group">
+            <p class="card-input__input-title">CVV code <span class="badge">?</span></p>
+            <input type="text" name="cvv" class="card-input__input">
+        </div>
+    </div>
+</div>

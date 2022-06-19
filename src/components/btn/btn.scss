@@ -1,0 +1,30 @@
+.btn{
+    display: inline-flex;
+    min-height: 40px;
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: .57em 2.14em;
+    line-height: 1;
+
+    border: 1px solid transparent;
+    border-radius: 3px;
+
+    font-weight: 400;
+    font-size: 14px;
+
+    cursor: pointer;
+    
+    background-color: transparent;
+    border-color: #CFCFCF;
+    color: #000000;
+    outline: none;
+    font-family: inherit;
+
+    &--fill{
+        background-color: #3366FF;
+        border-color: #3366FF;
+        color: #fff;
+    }
+}
