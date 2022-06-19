@@ -1,0 +1,29 @@
+{% macro stagesLine(props) %}
+<div class="stages-line">
+    <div class="stages-line__items">
+        
+        {% for item in props.items %}
+            {% if (props.acitveId == loop.index) %}
+                {% set _active = '_active' %}
+            {% else %}
+                {% set _active = '' %}
+            {% endif %}
+            
+            {% if (props.acitveId > loop.index) %}
+                {% set _done = '_done' %}
+            {% else %}
+                {% set _done = '' %}
+            {% endif %}
+
+            <div class="stages-line__item {{_active}} {{_done}}">
+                <p class="stages-line__item-number">{{ loop.index }}</p>
+                <p class="stages-line__item-title">{{ item.title }}</p>
+            </div>
+
+            {% if loop.index !== (loop.length) %}
+                <div class="stages-line__item-line"></div>
+            {% endif %}
+		{% endfor %}
+    </div>
+</div>
+{% endmacro %}

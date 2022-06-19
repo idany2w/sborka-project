@@ -4,5 +4,7 @@
 
 {% block content %}
 	{% include '../../components/header/header.nunj' %}
+    
+	{% include '../../components/cart/cart.nunj' %}
 
 {% endblock content %}

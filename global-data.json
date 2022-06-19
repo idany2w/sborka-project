@@ -25,14 +25,18 @@
 			"path": "#Sale"
 		}
 	],
-	"someData": [
+	"cartStages": [
 		{
-			"title": "Item 1",
-			"text": "Desc 1"
+			"title": "Account"
 		},
 		{
-			"title": "Item 2",
-			"text": "Desc 2"
+			"title": "Shipping"
+		},
+		{
+			"title": "Billing"
+		},
+		{
+			"title": "Review"
 		}
 	]
 }
